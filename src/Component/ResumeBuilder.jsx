@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ResumeForm from '../Component/ResumeForm';
 import { toast } from 'react-toastify';
 import FullEditableResume from './FullEditableResume';
-import DragDropResume from './DragDropResume';  // <-- Import karna mat bhoolna
+import DragDropResume from './DragDropResume';
 
 function ResumeBuilder() {
   const [improvedSummary, setImprovedSummary] = useState("");
@@ -16,7 +16,7 @@ function ResumeBuilder() {
       const response = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST",
         headers: {
-          "content-type": "application/json",
+          "Content-Type": "application/json",
           Authorization: "Bearer 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"
         },
         body: JSON.stringify({
@@ -30,7 +30,9 @@ function ResumeBuilder() {
           max_tokens: 150,
         }),
       });
+
       const data = await response.json();
+
       if (data.choices && data.choices.length > 0) {
         setImprovedSummary(data.choices[0].message.content);
       } else {
