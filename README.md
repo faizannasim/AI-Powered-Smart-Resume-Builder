@@ -1,6 +1,10 @@
-# React + Vite
 
+
+Note:
+The OpenAI API quota for this AI-Powered Smart Resume Builder project has been exhausted. Therefore, when you try to improve the resume summary using the AI feature, you may receive a "No Response from API" or similar error. This behavior is expected until the API quota is renewed or increased.
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+# React + Vite
 
 Currently, two official plugins are available:
 
