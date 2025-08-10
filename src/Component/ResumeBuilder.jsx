@@ -16,7 +16,7 @@ function ResumeBuilder() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Bearer"
+          Authorization: "Bearer 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"
         },
         body: JSON.stringify({
           model: "gpt-4o-mini",
