@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import ResumeForm from '../Component/ResumeForm';
 import { toast } from 'react-toastify';
 import FullEditableResume from './FullEditableResume';
-import DragDropResume from './DragDropResume';
 
 function ResumeBuilder() {
   const [improvedSummary, setImprovedSummary] = useState("");
@@ -17,7 +16,7 @@ function ResumeBuilder() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Bearer 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"
+          Authorization: "Bearer"
         },
         body: JSON.stringify({
           model: "gpt-4o-mini",
@@ -52,7 +51,7 @@ function ResumeBuilder() {
       {improvedSummary && (
         <>
           <FullEditableResume initialSummary={improvedSummary} />
-          <DragDropResume />
+         
         </>
       )}
     </div>
